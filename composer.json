@@ -1,0 +1,27 @@
+{
+    "name": "bankiru/yii-pinba",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Boris Gorbylev",
+            "email": "gorbylev@banki.ru"
+        }
+    ],
+    "require": {
+        "php": "~5.4",
+        "yiisoft/yii": "~1.1"
+    },
+    "suggest": {
+        "ext-pinba": "You should install pinba extension for php"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bankiru\\Yii\\Profiling\\Pinba\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bankiru\\Yii\\Profiling\\Pinba\\": "tests"
+        }
+    }
+}
