@@ -26,7 +26,9 @@ class Timer
      */
     public static function start(array $tags, array $data = [])
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timer_start($tags, $data);
     }
@@ -39,7 +41,9 @@ class Timer
      */
     public static function stop($timer)
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timer_stop($timer);
     }
@@ -54,7 +58,9 @@ class Timer
      */
     public static function add(array $tags, $value, array $data = [])
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timer_add($tags, $value, $data);
     }
@@ -67,7 +73,9 @@ class Timer
      */
     public static function delete($timer)
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timer_delete($timer);
     }
@@ -81,7 +89,9 @@ class Timer
      */
     public static function tagsMerge($timer, array $tags)
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timer_tags_merge($timer, $tags);
     }
@@ -95,7 +105,9 @@ class Timer
      */
     public static function tagsReplace($timer, array $tags)
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timer_tags_replace($timer, $tags);
     }
@@ -109,7 +121,9 @@ class Timer
      */
     public static function dataMerge($timer, array $data)
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timer_data_merge($timer, $data);
     }
@@ -124,7 +138,9 @@ class Timer
      */
     public static function dataReplace($timer, array $data)
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timer_data_replace($timer, $data);
     }
@@ -137,7 +153,9 @@ class Timer
      */
     public static function getInfo($timer)
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timer_get_info($timer);
     }
@@ -149,7 +167,9 @@ class Timer
      */
     public static function stopAll()
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timers_stop();
     }
@@ -162,7 +182,9 @@ class Timer
      */
     public static function getAll($flag = PINBA_ONLY_STOPPED_TIMERS)
     {
-        if (!self::isEnabled()) return;
+        if (!self::isEnabled()) {
+            return;
+        }
 
         return pinba_timers_get($flag);
     }
