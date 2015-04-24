@@ -13,11 +13,11 @@ class EventHandler
      */
     public function attach(\CComponent $component, $action, $beginEventName, $endEventName)
     {
-        $component->attachEventHandler($beginEventName, function (\CEvent $event) use ($action) {
+        $component->attachEventHandler($beginEventName, function(\CEvent $event) use ($action) {
             $this->handleBegin($event, $action);
         });
 
-        $component->attachEventHandler($endEventName, function (\CEvent $event) use ($action) {
+        $component->attachEventHandler($endEventName, function(\CEvent $event) use ($action) {
             $this->handleEnd($event, $action);
         });
     }

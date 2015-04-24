@@ -138,7 +138,9 @@ class Pinba extends \CApplicationComponent
 
     public function init()
     {
-        if (!$this->enabled) return;
+        if (!$this->enabled) {
+            return;
+        }
 
         if ($this->fixScriptName) {
             $scriptName = php_sapi_name() === 'cli'
@@ -163,7 +165,7 @@ class Pinba extends \CApplicationComponent
             call_user_func_array([$eventHandler, 'attach'], $event);
         }
 
-        \Yii::app()->attachEventHandler('onEndRequest', function(){
+        \Yii::app()->attachEventHandler('onEndRequest', function() {
             Timer::stopAll();
         });
     }
