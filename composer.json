@@ -8,8 +8,8 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "yiisoft/yii": "~1.1"
+        "php": "^5.4 | ^7.0",
+        "yiisoft/yii": "~1.1.17"
     },
     "suggest": {
         "ext-pinba": "You should install pinba extension for php"
@@ -17,11 +17,6 @@
     "autoload": {
         "psr-4": {
             "Bankiru\\Yii\\Profiling\\Pinba\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Bankiru\\Yii\\Profiling\\Pinba\\": "tests"
         }
     }
 }
